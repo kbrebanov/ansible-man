@@ -1,2 +1,6 @@
 ---
 # tasks file for man
+
+- name: Install man package
+  yum: name=man state=present
+  tags: man
