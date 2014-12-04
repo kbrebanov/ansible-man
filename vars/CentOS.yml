@@ -1,0 +1,4 @@
+---
+# vars file for man (CentOS specific)
+
+man_package_name: man

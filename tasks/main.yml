@@ -1,6 +1,16 @@
 ---
 # tasks file for man
 
-- name: Install man package
-  yum: name=man state=present
+- name: Include distribution specific variables
+  include_vars: "{{ ansible_distribution }}.yml"
+  tags: man
+
+- name: Install man package | CentOS
+  yum: name={{ man_package_name }} state=present
+  when: ansible_distribution == "CentOS"
+  tags: man
+
+- name: Install man package | Ubuntu
+  apt: name={{ man_package_name }} state=present update_cache=yes
+  when: ansible_distribution == "Ubuntu"
   tags: man

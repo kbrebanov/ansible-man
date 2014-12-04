@@ -1,0 +1,4 @@
+---
+# vars file for man (Ubuntu specific)
+
+man_package_name: man-db
