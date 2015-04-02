@@ -11,17 +11,22 @@ This role requires Ansible 1.4 or higher.
 Role Variables
 --------------
 
+None
+
 Dependencies
 ------------
+
+None
 
 Example Playbook
 ----------------
 
-1) Install man
-
-    - hosts: all
-      roles:
-         - { role: man }
+Install man
+```
+- hosts: all
+  roles:
+    - { role: kbrebanov.man }
+```
 
 License
 -------
