@@ -1,6 +1,8 @@
 man
 ===
 
+[![Ansible Galaxy](https://img.shields.io/badge/galaxy-kbrebanov.man-660198.svg)](https://galaxy.ansible.com/list#/roles/3298)
+
 Installs man.
 
 Requirements
