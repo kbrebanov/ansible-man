@@ -2,6 +2,11 @@
 # tasks file for man (CentOS specific)
 
 - name: Install man packages
-  yum: name={{ item }} state=present
-  with_items: man_packages
-  tags: man
+  become: yes
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ man_packages }}"
+  tags:
+    - man
